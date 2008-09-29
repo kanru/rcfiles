@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<deviceinfo version="0.2">
+  <device>
+      <match key="info.capabilities" contains="input.mouse">
+          <merge key="input.x11_driver" type="string">mouse</merge>
+          <match key="/org/freedesktop/Hal/devices/computer:system.kernel.name"
+              string="Linux">
+              <merge key="input.x11_driver" type="string">evdev</merge>
+          </match>
+      </match>
+
+    <match key="info.capabilities" contains="input.keys">
+        <merge key="input.x11_options.XkbRules" type="string">base</merge>
+        <!-- If we're using Linux, we use evdev by default (falling back to
+        keyboard otherwise). -->
+        <merge key="input.x11_driver" type="string">keyboard</merge>
+        <merge key="input.x11_options.XkbModel" type="string">pc105</merge>
+        <match key="/org/freedesktop/Hal/devices/computer:system.kernel.name"
+            string="Linux">
+            <merge key="input.x11_driver" type="string">evdev</merge>
+            <merge key="input.x11_options.XkbModel" type="string">evdev</merge>
+        </match>
+        <merge key="input.x11_options.XkbVariant" type="string" />
+        <merge key="input.x11_options.XkbLayout" type="string">dvorak</merge>
+        <merge key="input.x11_options.XkbOptions" type="string">ctrl:nocaps</merge>
+    </match>
+    <match key="info.capabilities" contains="input.touchpad">
+        <merge key="input.x11_driver" type="string">synaptics</merge>
+        <merge key="input.x11_options.Protocol" type="string">auto-dev</merge>
+        <merge key="input.x11_options.SHMConfig" type="string">on</merge>
+        <!--
+        <merge key="input.x11_options.LeftEdge" type="string">1100</merge>
+        <merge key="input.x11_options.RightEdge" type="string">5800</merge>
+        <merge key="input.x11_options.TopEdge" type="string">1600</merge>
+        <merge key="input.x11_options.BottomEdge" type="string">4200</merge>
+        -->
+        <merge key="input.x11_options.TapButton1" type="string">1</merge>
+        <merge key="input.x11_options.TapButton2" type="string">2</merge>
+        <merge key="input.x11_options.TapButton3" type="string">3</merge>
+        <merge key="input.x11_options.RTCornerButton" type="string">2</merge>
+        <merge key="input.x11_options.HorizEdgeScroll" type="string">on</merge>
+    </match>
+  </device>
+</deviceinfo>
