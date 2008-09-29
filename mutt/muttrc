@@ -1,0 +1,72 @@
+# pager
+unignore date
+ignore X-Bogosity List- X-
+set implicit_autoview=yes
+
+# index
+set index_format="%4C %Z %{%b %d} %-15.15L %s"
+
+# sending
+set sendmail_wait=-1
+
+# editing
+set edit_headers=yes
+
+# accounts
+set reverse_name = yes
+set from = koster@debian.org.tw
+set realname = "Kanru Chen"
+alternates kanru.96@stu.csie.ncnu.edu.tw
+alternates koster@debian.org.tw
+alternates s2321016@ncnu.edu.tw
+alternates s96321525@ncnu.edu.tw
+alternates kanru@csie.us
+alternates ckanru@gmail.com
+alternates kanru@atom.kanru.info
+
+set move=ask-yes
+
+# mailbox
+set mbox_type=MH
+set header_cache= ~/Mail/.hcache
+account-hook . 'unset preconnect imap_user imap_pass imap_authenticators; set ssl_starttls=ask-yes'
+folder-hook . "set folder=~/Mail;set mbox=+inbox;set postponed=+postponed;set record=+sent"
+account-hook imaps://stu.csie.ncnu.edu.tw/ 'set imap_user=kanru.96 imap_pass=xxxxx'
+folder-hook imaps://stu.csie.ncnu.edu.tw/ 'set folder=imaps://stu.csie.ncnu.edu.tw record=+Sent postponed=+Drafts'
+mailboxes ~/Mail/inbox imaps://stu.csie.ncnu.edu.tw /var/mail/kanru
+
+# charset
+set assumed_charset="big5:gb2312:utf-8"
+set charset="utf-8"
+set send_charset="utf-8:big5:gb2312:us-ascii:iso-8859-1:x-unknown"
+charset-hook !utf-8 big5
+charset-hook big5 BIG5-CP950
+set locale="en_US.UTF-8"
+set allow_8bit=yes
+set use_8bitmime=yes
+
+# contacts
+set query_command = "abook --mutt-query %s"
+set alias_file=~/.mutt/aliases
+set sort_alias=alias
+set reverse_alias=yes
+source $alias_file
+
+#set envelope_from=yes
+
+# gpg
+open-hook  \\.gpg$ "gpg --decrypt < %f > %t"
+close-hook \\.gpg$ "gpg --encrypt --recipient 365CC7A2 < %t > %f"
+set pgp_timeout = 0
+set pgp_auto_decode = yes
+set crypt_autosign = yes
+
+# lists
+subscribe members@debian.org.tw Newsteam@tossug.org hojia@tossug.org
+subscribe chewing-devel
+
+# key bindings
+bind	index	d		delete-message
+bind	pager	d		delete-message
+
+source /home/kanru/.mutt/colors.d/rosenfeldstheme

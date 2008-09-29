@@ -1,0 +1,5 @@
+; vi:ft=dosini
+[diff]
+	color = auto
+[user]
+	email = koster@debian.org.tw
