@@ -48,7 +48,6 @@ bindkey -e
 
 # {{{ Completition stuff
 autoload -Uz compinit
-#zmodload -i zsh/complist
 compinit
 
 #zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
@@ -93,26 +92,22 @@ alias ic='cls --color'
 alias ia='cls -A'
 alias i='cls -C'
 alias c='clear'
-alias e='gvim'
+alias e='vim'
 alias g='wget'
 alias m='mplayer'
 alias t='telnet'
 alias n='host'
 alias s='ssh'
 alias mk='make'
-alias td='todo'
-alias cgrep='grep --color'
 alias svnlog='svn log|less'
 alias acs='apt-cache search'
-alias api='aptitude install'
+alias api='sudo aptitude install'
 alias acsh='apt-cache show'
-alias au='aptitude update'
+alias au='sudo aptitude update'
 alias sa='sudo aptitude'
 alias tlog='tail -f /var/log/syslog'
 alias smi='sudo make install'
 alias sdi='sudo dpkg -i'
-alias sshn='ssh netinfo.cc.ncnu.edu.tw -p 6682'
-alias p5='python2.5 /usr/bin/paster'
 alias grep='grep --color'
 alias src='cd ~src'
 alias gi='gvim --remote-tab'
@@ -143,9 +138,12 @@ ${YELLOW}%# ${NO_COLOUR}"
 
 # }}}
 
+hash -d deb=/var/cache/apt/archives
 hash -d doc=/usr/share/doc
+hash -d linux=/lib/modules/$(command uname -r)/build/
 hash -d log=/var/log
 hash -d src=/usr/src
+
 
 function 0 {
 	wget -c http://0rz.tw/$1;
@@ -159,6 +157,3 @@ function dormvga () {
 function labvga () {
     xrandr --output VGA --mode 1280x1024 --below LVDS;
 }
-
-# No used trash
-# zstyle :compinstall filename '/home/kanru/.zshrc'
