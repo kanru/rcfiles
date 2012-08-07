@@ -19,6 +19,7 @@ ln -bs $git/zsh/zshhashes .zshhashes
 ln -bs $git/Xresources .Xresources
 ln -bs $git/cvsrc      .cvsrc
 ln -bs $git/devscripts .devscripts
+ln -bs $git/dir_colors .dir_colors
 ln -bs $git/fonts.conf .fonts.conf
 ln -bs $git/gitconfig  .gitconfig
 ln -bs $git/hgrc       .hgrc
