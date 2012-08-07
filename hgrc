@@ -1,0 +1,33 @@
+[ui]
+username = "Kan-Ru Chen (陳侃如)" <kanru@kanru.info>
+
+[defaults]
+diff = -p -U 8
+qdiff = -p -U 8
+qnew = -U
+qref = -U
+
+[paths]
+try = ssh://hg.mozilla.org/try
+
+[hooks]
+post-try = hg phase --force --draft "mq()"
+
+[diff]
+git = 1
+showfunc = 1
+unified = 8
+
+[extensions]
+trychooser = ~/zone2/public/trychooser/trychooser
+bzexport = ~/zone2/public/hgbztk/bzexport.py
+mqskit = ~/zone2/public/mqskit/mqskit.py
+mq = 
+purge =
+hgk =
+rebase =
+record =
+churn = 
+color =
+graphlog =
+progress =

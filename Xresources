@@ -1,0 +1,41 @@
+UXTerm*termName: xterm-256color
+UXTerm*maxBufSize: 131072
+UXTerm*altSendsEscape: true
+UXTerm*foreground: gray
+UXTerm*background: black
+UXTerm*charClass: 33:48,35:48,37-38:48,43-47:48,58:48,61:48,63-64:48,95:48,126:48
+UXTerm*eightBitInput: false
+UXTerm*faceName: Monospace:minspace=true
+UXTerm*faceNameDoublesize: WenQuanYi Micro Hei:scale=1.2:minspace=true
+UXTerm*faceSize: 11
+UXTerm*fastScroll: true
+UXTerm*metaSendsEscape: true
+UXTerm*renderFont: true
+UXTerm*saveLines: 4096
+UXTerm*ttyModes: erase ^?
+UXTerm*visualBell: false
+UXTerm*utf8: 1
+
+! *UXTerm*faceSize1: 4.88
+! *UXTerm*faceSize2: 6.10
+! *UXTerm*faceSize3: 7.32
+! *UXTerm*faceSize4: 9.76
+! *UXTerm*faceSize5: 14.4
+! *UXTerm*faceSize6: 19.20
+
+UXTerm*translations: #override \n\
+        Alt <Key>Return:insert() \n\
+        Super~Ctrl <Key>n:spawn-new-terminal() \n\
+        Super <Key>=:larger-vt-font() \n\
+        Super <Key>-:smaller-vt-font() \n\
+        ~Shift~Ctrl<Btn2Up>: insert-selection(PRIMARY, CUT_BUFFER0) \n\
+        Shift~Ctrl<Btn2Up>:  insert-selection(CLIPBOARD, CUT_BUFFER1) \n\
+        ~Shift<BtnUp>:       select-end(PRIMARY, CUT_BUFFER0) \n\
+        Shift<BtnUp>:        select-end(CLIPBOARD, CUT_BUFFER1)
+
+Xft.antialias: 1
+Xft.autohint: 1
+Xft.hinting: 1
+Xft.hintstyle: hintslight
+Xft.lcdfilter: lcddefault
+Xft.rgba: rgb
