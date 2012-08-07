@@ -1,5 +1,14 @@
-; vi:ft=dosini
-[diff]
-	color = auto
+[color]
+	ui = true
+[core]
+	autocrlf = false
+	excludesfile = /home/kanru/zone1/etc/gitignore
+[alias]
+	st = status
+[gui]
+        diffcontext = 8
+[gitpkg]
+	pre-export-hook = /usr/share/gitpkg/hooks/pristine-tar-pre-export-hook
 [user]
-	email = koster@debian.org.tw
+	name = Kan-Ru Chen (陳侃如)
+	email = kanru@kanru.info
