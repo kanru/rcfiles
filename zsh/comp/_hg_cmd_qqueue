@@ -1,0 +1,16 @@
+#compdef hg_cmd_qqueue
+declare -A opt_args
+ 
+_hg_queues() {
+  typeset -a queues
+  queues=(${(f)"$(_hg_cmd qqueue --quiet)"})
+  (( $#queues )) && _describe -t hg-queues 'queues' queues
+}
+
+_arguments -s -w \
+           '--list' \
+           '--create' \
+           '--rename' \
+           '--delete' \
+           '--purge' \
+           '*:queues:_hg_queues'

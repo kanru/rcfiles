@@ -1,0 +1,5 @@
+# -*- mode: sh; sh-shell: zsh; -*-
+
+hash -d    aosp=$HOME/zone2/public/android-aosp
+hash -d     b2g=$HOME/zone2/mozilla/B2G
+hash -d mozilla=$HOME/zone2/mozilla

@@ -1,0 +1,38 @@
+# -*- mode: sh; sh-shell: zsh; -*-
+
+eval `dircolors -b ~/.dir_colors`
+eval $(lesspipe)
+
+if [ -e /etc/debian_chroot ]; then
+    export debian_chroot=`cat /etc/debian_chroot`
+fi
+
+export LC_PAPER="zh_TW.UTF-8"
+export REPORTTIME=5
+export PATH=/usr/lib/ccache:$HOME/bin:$PATH
+export TEXDOC_VIEWER_PDF='(mupdf %s)&'
+export BROWSER=$HOME/bin/browse
+export DEBEMAIL="koster@debian.org"
+export USERFULLNAME="Kan-Ru Chen (陳侃如)"
+export DEBFULLNAME=$USERFULLNAME
+export EMAIL="kanru@kanru.info"
+export GIT_AUTHOR_NAME=$USERFULLNAME
+export GIT_AUTHOR_EMAIL="kanru@kanru.info"
+export GIT_COMMITTER_NAME=$USERFULLNAME
+export GIT_COMMITTER_EMAIL="kanru@kanru.info"
+export EDITOR="emacsclient"
+export ALTERNATE_EDITOR="zile"
+export PAGER="less"
+export LESSCHARSET=utf-8
+export LESS_TERMCAP_mb=$'\E[01;31m'
+export LESS_TERMCAP_md=$'\E[01;31m'
+export LESS_TERMCAP_me=$'\E[0m'
+export LESS_TERMCAP_se=$'\E[0m'
+export LESS_TERMCAP_so=$'\E[01;44;33m'
+export LESS_TERMCAP_ue=$'\E[0m'
+export LESS_TERMCAP_us=$'\E[00;32m'
+export XDG_DESKTOP_DIR="$HOME"
+
+fpath=($fpath $HOME/.zsh/comp)
+typeset -U fpath
+mailpath=()
