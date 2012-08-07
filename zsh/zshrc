@@ -55,11 +55,12 @@ CHPWD_PROFILE='default'
 function chpwd_profiles() {
     local -x profile
     zstyle -s ":chpwd:profiles:${PWD}" profile profile || profile='default'
-    if (( ${+functions[chpwd_profile_$profile]} )) ; then
+    if (( ${+functions[chpwd_profile_$profile]} )) &&
+        [ "$profile" != "$CHPWD_PROFILE" ] ; then
         print "Switching to profile: $profile"
+        CHPWD_PROFILE="${profile}"
         chpwd_profile_${profile}
     fi
-    CHPWD_PROFILE="${profile}"
     return 0
 }
 chpwd_functions=( ${chpwd_functions} chpwd_profiles )
