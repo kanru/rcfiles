@@ -1,5 +1,5 @@
 [ui]
-username = "Kan-Ru Chen (陳侃如)" <kanru@kanru.info>
+username = Kan-Ru Chen (陳侃如) <kanru@kanru.info>
 
 [defaults]
 diff = -p -U 8
