@@ -11,7 +11,7 @@ qref = -U
 try = ssh://hg.mozilla.org/try
 
 [hooks]
-post-try = hg phase --force --draft "mq()"
+post-trychooser = hg phase --force --draft "mq()"
 
 [diff]
 git = 1
