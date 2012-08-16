@@ -7,6 +7,10 @@ qdiff = -p -U 8
 qnew = -U
 qref = -U
 
+[alias]
+qser = qseries -s
+qgu  = qguard -l
+
 [paths]
 try = ssh://hg.mozilla.org/try
 
