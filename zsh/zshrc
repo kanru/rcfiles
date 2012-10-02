@@ -102,6 +102,7 @@ then
   unsetopt prompt_subst
   unfunction precmd
   PS1='$ '
+  export PAGER=cat
 fi
 
 # Recursively find the the toplevel Makefile or build.xml and call
