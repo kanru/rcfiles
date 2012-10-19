@@ -4,9 +4,9 @@ WORDCHARS='*?_-.[]~&;!#$%^(){}<>'
 HISTFILE=~/.histfile
 HISTSIZE=2000
 SAVEHIST=2000
-setopt share_history hist_reduce_blanks hist_no_functions hist_ignore_space
-setopt append_history histignorealldups dvorak
-setopt nohashcmds autocd notify prompt_subst nobeep
+setopt hist_reduce_blanks hist_no_functions hist_ignore_space
+setopt inc_append_history histignorealldups dvorak
+setopt autocd notify prompt_subst nobeep correct
 bindkey -e
 autoload edit-command-line && zle -N edit-command-line
 bindkey '\ee' edit-command-line
