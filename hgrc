@@ -23,7 +23,7 @@ showfunc = 1
 unified = 8
 
 [extensions]
-trychooser = ~/zone2/public/trychooser/trychooser
+trychooser = ~/zone2/public/trychooser
 bzexport = ~/zone2/public/hgbztk/bzexport.py
 mqskit = ~/zone2/public/mqskit/mqskit.py
 mq = 
