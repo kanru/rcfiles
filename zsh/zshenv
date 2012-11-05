@@ -9,9 +9,9 @@ fi
 
 export LC_PAPER="zh_TW.UTF-8"
 export REPORTTIME=5
-export PATH=/usr/lib/ccache:$HOME/bin:$PATH
+export PATH=$HOME/zone2/private/k-bin:$HOME/.local/bin:/usr/lib/ccache:$PATH
 export TEXDOC_VIEWER_PDF='(mupdf %s)&'
-export BROWSER=$HOME/bin/browse
+export BROWSER=browse
 export DEBEMAIL="koster@debian.org"
 export USERFULLNAME="Kan-Ru Chen (陳侃如)"
 export DEBFULLNAME=$USERFULLNAME
