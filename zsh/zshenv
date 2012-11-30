@@ -1,6 +1,6 @@
 # -*- mode: sh; sh-shell: zsh; -*-
 
-eval `dircolors -b ~/.dir_colors`
+eval `dircolors`
 eval $(lesspipe)
 
 if [ -e /etc/debian_chroot ]; then
