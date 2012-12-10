@@ -3,6 +3,7 @@
 [core]
 	autocrlf = false
 	excludesfile = /home/kanru/zone1/etc/gitignore
+	attributesfile = /home/kanru/zone1/etc/gitattributes
 [alias]
 	st = status
 [gui]
@@ -12,3 +13,5 @@
 [user]
 	name = Kan-Ru Chen (陳侃如)
 	email = kanru@kanru.info
+[diff "lisp"]
+	xfuncname="^(\\((def|test).*)$"
