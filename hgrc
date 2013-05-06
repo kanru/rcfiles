@@ -10,6 +10,7 @@ qref = -U
 [alias]
 qser = qseries -s
 qgu  = qguard -l
+qstat = qdiff --stat
 
 [paths]
 try = ssh://hg.mozilla.org/try
