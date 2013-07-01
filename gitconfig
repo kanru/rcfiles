@@ -15,3 +15,5 @@
 	email = kanru@kanru.info
 [diff "lisp"]
 	xfuncname="^(\\((def|test).*)$"
+[push]
+	default = current
