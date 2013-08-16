@@ -16,7 +16,6 @@ qstat = qdiff --stat
 try = ssh://hg.mozilla.org/try
 
 [hooks]
-post-push = hg phase --force --draft "mq()"
 pre-push = read -p 'Are you sure you want to push to remote? (y/n): ' REPLY; if test "$REPLY" != "y"; then echo 'Push cancelled'; exit 1; fi
 
 
