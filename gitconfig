@@ -16,4 +16,4 @@
 [diff "lisp"]
 	xfuncname="^(\\((def|test).*)$"
 [push]
-	default = simple
+	default = nothing
