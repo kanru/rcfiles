@@ -28,6 +28,7 @@ unified = 8
 trychooser = ~/zone2/public/trychooser
 bzexport = ~/zone2/public/hgbztk/bzexport.py
 mqskit = ~/zone2/public/mqskit/mqskit.py
+qbackout = ~/zone2/public/qbackout
 mq = 
 purge =
 hgk =
@@ -37,3 +38,6 @@ churn =
 color =
 graphlog =
 progress =
+
+[hostfingerprints]
+  hg.mozilla.org = AF:27:B9:34:47:4E:E5:98:01:F6:83:2B:51:C9:AA:D8:DF:FB:1A:27

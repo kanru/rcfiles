@@ -36,3 +36,7 @@ export XDG_DESKTOP_DIR="$HOME"
 fpath=($fpath $HOME/.zsh/comp)
 typeset -U fpath
 mailpath=()
+
+if [ -e $HOME/.zshlocalenv ]; then
+    source $HOME/.zshlocalenv
+fi
