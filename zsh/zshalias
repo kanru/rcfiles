@@ -1,6 +1,6 @@
 # -*- mode: sh; sh-shell: zsh; -*-
 
-alias cls='ls -v --color=auto --hide=:2e\*'
+alias cls='ls -v --color=auto --hide=:2e\* --hide=__MACOSX\*'
 alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
