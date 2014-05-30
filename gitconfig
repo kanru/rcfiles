@@ -6,6 +6,7 @@
 	attributesfile = /home/kanru/zone1/etc/gitattributes
 [alias]
 	st = status
+        hg-format-patch = !sh -c 'git format-patch -kp -U8 "$@"|tee /dev/stderr|xargs git-patch-to-hg-patch' git
 [gui]
         diffcontext = 8
 [gitpkg]
@@ -17,3 +18,6 @@
 	xfuncname="^(\\((def|test).*)$"
 [push]
 	default = nothing
+[merge]
+        conflictstyle = diff3
+        tool = emerge
