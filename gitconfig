@@ -1,23 +1,24 @@
+# -*- mode: conf;  -*-
 [color]
-	ui = true
+        ui = true
 [core]
-	autocrlf = false
-	excludesfile = /home/kanru/zone1/etc/gitignore
-	attributesfile = /home/kanru/zone1/etc/gitattributes
+        autocrlf = false
+        excludesfile = /home/kanru/git/personal/etc/gitignore
+        attributesfile = /home/kanru/git/personal/etc/gitattributes
 [alias]
-	st = status
+        st = status
         hg-format-patch = !sh -c 'git format-patch -kp -U8 "$@"|tee /dev/stderr|xargs git-patch-to-hg-patch' git
 [gui]
         diffcontext = 8
 [gitpkg]
-	pre-export-hook = /usr/share/gitpkg/hooks/pristine-tar-pre-export-hook
+        pre-export-hook = /usr/share/gitpkg/hooks/pristine-tar-pre-export-hook
 [user]
-	name = Kan-Ru Chen (陳侃如)
-	email = kanru@kanru.info
+        name = Kan-Ru Chen (陳侃如)
+        email = kanru@kanru.info
 [diff "lisp"]
-	xfuncname="^(\\((def|test).*)$"
+        xfuncname="^(\\((def|test).*)$"
 [push]
-	default = nothing
+        default = nothing
 [merge]
         conflictstyle = diff3
         tool = emerge
