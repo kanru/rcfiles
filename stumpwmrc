@@ -7,6 +7,7 @@
 (define-key *top-map* (kbd "s-r") "run-shell-command")
 (define-key *top-map* (kbd "s-Return") "run-shell-command uxterm")
 (define-key *top-map* (kbd "s-;") "colon")
+(define-key *top-map* (kbd "s-x") "colon")
 (define-key *top-map* (kbd "s-:") "eval")
 (define-key *top-map* (kbd "s-j") "fnext")
 (define-key *top-map* (kbd "s-k") "fprev")
