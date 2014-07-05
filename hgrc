@@ -25,10 +25,10 @@ showfunc = 1
 unified = 8
 
 [extensions]
-trychooser = ~/git/trychooser
-hgbztk = ~/git/hgbztk/bzexport.py
-mqskit = ~/git/mqskit/mqskit.py
-qbackout = ~/git/qbackout
+trychooser = ~/hg/trychooser
+hgbztk = ~/hg/hgbztk/bzexport.py
+mqskit = ~/hg/mqskit/mqskit.py
+qbackout = ~/hg/version-control-tools/hgext/qbackout
 mq = 
 purge =
 hgk =
