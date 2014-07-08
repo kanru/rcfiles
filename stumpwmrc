@@ -9,8 +9,8 @@
 (define-key *top-map* (kbd "s-;") "colon")
 (define-key *top-map* (kbd "s-x") "colon")
 (define-key *top-map* (kbd "s-:") "eval")
-(define-key *top-map* (kbd "s-j") "fnext")
-(define-key *top-map* (kbd "s-k") "fprev")
+(define-key *top-map* (kbd "s-j") "next")
+(define-key *top-map* (kbd "s-k") "prev")
 (define-key *top-map* (kbd "s-1") "gselect 1")
 (define-key *top-map* (kbd "s-2") "gselect 2")
 (define-key *top-map* (kbd "s-3") "gselect 3")
@@ -20,9 +20,11 @@
 (define-key *top-map* (kbd "s-7") "gselect 7")
 (define-key *top-map* (kbd "s-8") "gselect 8")
 (define-key *top-map* (kbd "s-9") "gselect 9")
+(define-key *top-map* (kbd "s-g") '*GROUPS-MAP*)
+(define-key *top-map* (kbd "s-f") "fullscreen")
+(define-key *top-map* (kbd "s-Left") "gnext")
+(define-key *top-map* (kbd "s-Right") "gprev")
 
-(defcommand (fprev stumpwm::tile-group) () ()
-"Cycle through the frame tree to the previous frame."
-  (stumpwm::focus-prev-frame (stumpwm::current-group)))
-
-(enable-mode-line (current-screen) (current-head) t)
+(setf *time-modeline-string* "%a %b %e %k:%M")
+(enable-mode-line (current-screen) (current-head) t
+                  "[^B%n^b] %W | %d")
