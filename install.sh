@@ -26,5 +26,4 @@ ln -bs $git/gitconfig  .gitconfig
 ln -bs $git/hgrc       .hgrc
 ln -bs $git/nethackrc  .nethackrc
 ln -bs $git/quiltrc    .quiltrc
-ln -bs $git/signature  .signature
 ln -bs $git/stumpwmrc  .stumpwmrc
