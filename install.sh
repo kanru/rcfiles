@@ -27,3 +27,4 @@ ln -bs $git/hgrc       .hgrc
 ln -bs $git/nethackrc  .nethackrc
 ln -bs $git/quiltrc    .quiltrc
 ln -bs $git/stumpwmrc  .stumpwmrc
+ln -bs $git/tmux.conf  .tmux.conf
