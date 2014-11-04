@@ -25,13 +25,9 @@ showfunc = 1
 unified = 8
 
 [extensions]
-trychooser = ~/hg/trychooser
-hgbztk = ~/hg/hgbztk/bzexport.py
-mqskit = ~/hg/mqskit/mqskit.py
 qbackout = ~/hg/version-control-tools/hgext/qbackout
 mq = 
 purge =
-hgk =
 rebase =
 record =
 churn = 
