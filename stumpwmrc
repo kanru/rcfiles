@@ -29,6 +29,6 @@
 (enable-mode-line (current-screen) (current-head) t
                   "[^B%n^b] %W | %d")
 
-(set-contrib-dir "~/git/stumpwm-contrib")
-(load-module "stumptray")
-(stumptray::stumptray)
+(when (member "stumptray" (list-modules) :test #'string=)
+  (load-module "stumptray")
+  (funcall (find-symbol (string :stumptray) :stumptray)))
