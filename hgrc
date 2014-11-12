@@ -25,7 +25,7 @@ showfunc = 1
 unified = 8
 
 [extensions]
-qbackout = ~/hg/version-control-tools/hgext/qbackout
+qbackout = ~/mozilla/version-control-tools/hgext/qbackout
 mq = 
 purge =
 rebase =
