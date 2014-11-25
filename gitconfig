@@ -3,8 +3,8 @@
         ui = true
 [core]
         autocrlf = false
-        excludesfile = /home/kanru/git/personal/etc/gitignore
-        attributesfile = /home/kanru/git/personal/etc/gitattributes
+        excludesfile = /home/kanru/r/personal/etc/gitignore
+        attributesfile = /home/kanru/r/personal/etc/gitattributes
 [alias]
         st = status
         hg-format-patch = !sh -c 'git format-patch -kp -U8 "$@"|tee /dev/stderr|xargs git-patch-to-hg-patch' git
