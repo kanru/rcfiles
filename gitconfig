@@ -13,7 +13,7 @@
 [gitpkg]
         pre-export-hook = /usr/share/gitpkg/hooks/pristine-tar-pre-export-hook
 [user]
-        name = Kan-Ru Chen (陳侃如)
+        name = Kan-Ru Chen
         email = kanru@kanru.info
 [diff "lisp"]
         xfuncname="^(\\((def|test).*)$"
