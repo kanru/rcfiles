@@ -92,6 +92,8 @@ function chpwd_profile_debian() {
 
 function chpwd_profile_mozilla() {
     chpwd_profile_default
+
+    export PATH=$PATH:~/r/git-cinnabar
 }
 
 # For stupid emacs Tramp mode
