@@ -7,7 +7,7 @@
         attributesfile = /home/kanru/r/personal/etc/gitattributes
 [alias]
         st = status
-        hg-format-patch = !sh -c 'git format-patch -kp -U8 "$@"|tee /dev/stderr|xargs git-patch-to-hg-patch' git
+        hg-format-patch = !sh -c 'git format-patch -kp -U8 -M -B "$@"|tee /dev/stderr|xargs git-patch-to-hg-patch' git
 [gui]
         diffcontext = 8
 [gitpkg]
