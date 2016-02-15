@@ -93,7 +93,8 @@ function chpwd_profile_debian() {
 function chpwd_profile_mozilla() {
     chpwd_profile_default
 
-    export PATH=$PATH:~/r/git-cinnabar
+    export PATH=~/r/git-cinnabar:$PATH
+    export PATH=~/.mozbuild/version-control-tools/git/commands:$PATH
 }
 
 # For stupid emacs Tramp mode
