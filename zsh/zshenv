@@ -9,7 +9,7 @@ fi
 
 export LC_PAPER="zh_TW.UTF-8"
 export REPORTTIME=5
-export PATH=$HOME/r/bin:$HOME/.local/bin:/usr/lib/ccache:$PATH
+export PATH=$HOME/r/bin:$HOME/.local/bin:$HOME/.cargo/bin:/usr/lib/ccache:$PATH
 export LD_LIBRARY_PATH=$HOME/.local/lib
 export TEXDOC_VIEWER_PDF='(mupdf %s)&'
 export BROWSER=browse
