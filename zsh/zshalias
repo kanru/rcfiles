@@ -25,3 +25,4 @@ alias py='python'
 alias sue='sudoedit'
 alias notify-build="[ -e /usr/bin/notify-send ] && notify-send -u critical -i /usr/share/icons/gnome/48x48/status/task-due.png 'Boss !!' \"`pwd`\nBuild Completed at `date`\" -t 0"
 alias b2g-ps='adb shell b2g-ps'
+alias tailf='tail -f'
