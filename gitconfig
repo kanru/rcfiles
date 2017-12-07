@@ -22,3 +22,5 @@
 [merge]
         conflictstyle = diff3
         tool = emerge
+[rerere]
+	enabled = true
