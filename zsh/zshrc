@@ -67,7 +67,7 @@ chpwd_functions=( ${chpwd_functions} chpwd_profiles )
 
 zstyle ":chpwd:profiles:$HOME/mozilla(|/|/*)" profile mozilla
 zstyle ":chpwd:profiles:$HOME/0xlab(|/|/*)"   profile 0xlab
-zstyle ":chpwd:profiles:$HOME/debian(|/|/*)"  profile debian
+zstyle ":chpwd:profiles:$HOME/[Dd]ebian(|/|/*)"  profile debian
 
 function chpwd_profile_default() {
     # TODO: auto unset
